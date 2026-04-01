@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'gif-item',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './gif-item.scss',
 })
 export class GifItem {
+  imageUrls = input.required<string>();
 
 }
