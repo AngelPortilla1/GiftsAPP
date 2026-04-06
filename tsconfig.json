@@ -4,6 +4,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@enviroments/*" : ["src/environments/*"]
     },
