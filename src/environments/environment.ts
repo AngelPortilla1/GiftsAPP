@@ -7,7 +7,9 @@ companySlogan : 'Find the best gifs in the world',
 
 
 //API KEYS
-gifphyapiKey : '4EUbEPHVsEk14mlJRyaaxzV58RmYQ7ii'
+gifphyapiKey : '4EUbEPHVsEk14mlJRyaaxzV58RmYQ7ii',
 // URLS
+
+giphyUrl: 'https://api.giphy.com/v1'
 
 };
