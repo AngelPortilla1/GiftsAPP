@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments/environment';
 import { GiphyResponse } from '../../../interfaces/giphy.interface';
 import { Gif } from '../interfaces/gif.interface';
+import { GifMapper } from '../mapper/gif.mapper';
 
 @Injectable({providedIn: 'root'})
 export class GifsService {
@@ -25,7 +26,9 @@ export class GifsService {
         limit : 20,
       },
     }).subscribe( (resp)=>{
-      resp.data[0].images.original.url
+      const gifs = GifMapper.mapGiphyItemsToGifsArray(resp.data);
+      this.trendingGifs.set(gifs);
+      console.log(gifs)
 
     })
 

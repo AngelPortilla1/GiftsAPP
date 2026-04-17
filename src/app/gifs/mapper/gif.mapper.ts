@@ -11,6 +11,13 @@ export class GifMapper {
       url: item.images.original.url
     }
   }
+
+
+  static mapGiphyItemsToGifsArray(items : GiphyItem[]): Gif[] {
+    return items.map( this.mapGiphyitemToGif)
+
     }
+  }
+
 
 
