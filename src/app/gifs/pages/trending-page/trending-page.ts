@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { GifList } from "../../components/gif-list/gif-list";
+import { GifsService } from '../../services/gifs.service';
 
 
 
@@ -22,8 +23,8 @@ const imageUrls: string[]=[
   selector: 'app-trending-page',
   imports: [GifList],
   templateUrl: './trending-page.html',
-  styleUrl: './trending-page.css',
 })
 export default class TrendingPage {
   gifs = imageUrls;
+  GifsService = inject(GifsService);
 }

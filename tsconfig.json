@@ -4,9 +4,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
     "paths": {
-      "@enviroments/*" : ["src/environments/*"]
+      "@environments/*" : ["src/environments/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
