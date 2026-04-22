@@ -1,0 +1,18 @@
+<h2 class="text-2xl font-bold text-white">Buscar GIFs</h2>
+<h3 class="text-lg font-semibold text-white">Buscar gifs por nombre, descripcion o tags</h3>
+
+
+<section class ="flex flex-col gap-4">
+    <input
+        type="text"
+        class="w-full rounded-lg border-2 border-gray-300 p-2 text-lg"
+        placeholder="Buscar gifs..."
+        (keyup.enter)="onSearch($event.target.value)"
+    >
+</section>
+
+
+
+<section class=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <gif-list [gifs]="[]"></gif-list>
+</section>
