@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { GifList } from '../../components/gif-list/gif-list';
+import { GifsService } from '../../services/gifs.service';
 
 @Component({
   selector: 'app-search-page',
@@ -8,7 +9,11 @@ import { GifList } from '../../components/gif-list/gif-list';
   styleUrl: './search-page.css',
 })
 export default class SearchPage {
+
+  GifsService = inject(GifsService);
+
   onSearch(query: string) {
-    console.log({query});
+
+    this.GifsService.searchGifs(query);
   }
 }
