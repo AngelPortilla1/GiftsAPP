@@ -1,18 +1,22 @@
-<h2 class="text-2xl font-bold text-blue-500">Buscar GIFs</h2>
-<h3 class="text-lg font-semibold text-green-500">Buscar gifs por nombre, descripcion o tags</h3>
+<div class="px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+  <!-- Header Section -->
+  <div class="mb-6 sm:mb-8">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-500 mb-2">Buscar GIFs</h2>
+    <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-green-500">Buscar gifs por nombre, descripción o tags</h3>
+  </div>
 
-
-<section class ="flex flex-col gap-4">
+  <!-- Search Section -->
+  <section class="mb-6 sm:mb-8">
     <input
-        type="text"
-        class="w-full rounded-lg border-2 border-gray-300 p-2 text-lg"
-        placeholder="Buscar gifs..."
-        (keyup.enter)="onSearch($event.target.value)"
+      type="text"
+      class="w-full rounded-lg border-2 border-gray-300 p-2 sm:p-3 text-base sm:text-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+      placeholder="Buscar gifs..."
+      (keyup.enter)="onSearch($event.target.value)"
     >
-</section>
+  </section>
 
-
-
-<section class=" grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-    <gif-list [gifs]="gifs()"></gif-list>"
-</section>
+  <!-- Grid Section -->
+  <section class="text-2xl font-bold mb-4">
+    <gif-list [gifs]="gifs()"></gif-list>
+  </section>
+</div>

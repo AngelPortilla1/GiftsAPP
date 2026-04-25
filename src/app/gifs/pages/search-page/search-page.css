@@ -1,3 +1,18 @@
 :host {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos responsive adicionales */
+@media (max-width: 640px) {
+  /* Mobile: Optimizar espaciado */
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Tablet: Espaciado medio */
+}
+
+@media (min-width: 1025px) {
+  /* Desktop: Espaciado amplio */
 }
