@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-gifhistory',
   imports: [],
   templateUrl: './gifhistory.html',
-  styleUrl: './gifhistory.scss',
+  styleUrls: ['./gifhistory.scss'],
 })
 export default class Gifhistory {
-
+  query = toSignal(
+    inject(ActivatedRoute).params.pipe(map((params) => params['query'] ?? ''))
+  );
 }
