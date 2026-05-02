@@ -73,4 +73,8 @@ export class GifsService {
     //   console.log({search: gifs});
     // })
   }
+
+  getHistoryGifs(query:string): Gif[] {
+    return this.searchHistory()[query.toLowerCase()] ?? [];
+  }
 }
